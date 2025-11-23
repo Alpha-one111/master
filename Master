@@ -1,0 +1,56 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ｍａｓｔｅｒ</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: monospace;
+    }
+
+    video.bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <video class="bg-video" autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <h1>Ｍａｓｔｅｒ</h1>
+
+</body>
+</html>
